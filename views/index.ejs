@@ -4,29 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="/style/styles.css">
     <title>Animated Background with Cat Fact</title>    
 </head>
 
 <body>
-    <audio src="audio/meow.mp3" autoplay></audio>
+    <audio src="/audio/meow.mp3" autoplay></audio>
     <div class="wave"></div>
     <div class="wave"></div>
     <div class="wave"></div>
 
     <div class="card">
-        <h2>Amazing Cat Facts</h2>       
-        <div><img src="<%= img %>" alt=""></div>       
+        <h2>Amazing Cat Facts</h2>
+        <% if (locals.img) { %>
+        <div><img src="<%= img %>" alt=""></div>
+        <% } %>
         <p id="catFact">
             <%= data %>
         </p>
         <button class="btn" id="fetchButton" onclick="window.location.href='/fact'">Fetch Cat Fact</button>
     </div>
-
-    <script>
-        // Your JavaScript code here
-        // ...
-    </script>
+    
 </body>
 
 </html>
