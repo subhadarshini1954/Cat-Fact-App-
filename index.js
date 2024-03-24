@@ -37,7 +37,7 @@ app.get("/fact", async (req, res) => {
     res.render("index.ejs", { data: `"`+fact.fact+`"`, img: img });
   } catch (error) {
     // Handle errors
-    console.error("Error fetching data:", error.message);
+    console.log("Error fetching data:", error.message);
     res.status(500).send("Error fetching data");
   }
 });
